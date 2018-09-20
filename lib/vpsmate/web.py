@@ -2725,10 +2725,10 @@ class BackendHandler(RequestHandler):
                             line = '#%s' % line
                             lines.append(line)
                             # add a mirrorlist line
-                            metalink = 'http://mirrors.neu.edu.cn/CentALT/'\
-                                '%s/$basearch' % self.settings['dist_verint']
+                            metalink = 'http://mirrors.neu.edu.cn/CentALT/%s/$basearch' % self.settings['dist_verint']
                             line = 'mirrorlist=%s\n' % metalink
                         lines.append(line)
+						
                 if baseurl_found:
                     with open(repofile, 'w') as f: f.writelines(lines)
 
