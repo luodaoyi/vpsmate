@@ -2720,7 +2720,7 @@ class BackendHandler(RequestHandler):
                 baseurl_found = False
                 with open(repofile) as f:
                     for line in f:
-                        if line.startswith('baseurl=http://mirrors.neu.edu.cn/CentALT/$releasever/$basearch'):
+                        if line.startswith('baseurl='):
                             baseurl_found = True
                             line = '#%s' % line
                             lines.append(line)
