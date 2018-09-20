@@ -2717,11 +2717,11 @@ class BackendHandler(RequestHandler):
             repofile = '/etc/yum.repos.d/centalt.repo'
             if os.path.exists(repofile):
                 lines = []
-               # baseurl_found = False	#修复备份
+               # baseurl_found = False
 				baseurl_found = True
                 with open(repofile) as f:
                     for line in f:
-                     #   if line.startswith('baseurl='):	#修复备份
+                     #   if line.startswith('baseurl='):
 						if line.startswith('baseurl=http://mirrors.neu.edu.cn/CentALT/$releasever/$basearch'):
                             baseurl_found = True
                             line = '#%s' % line
